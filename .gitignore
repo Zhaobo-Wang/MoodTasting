@@ -1,0 +1,24 @@
+# 忽略所有编译产物
+**/target/
+**/build/
+**/dist/
+**/node_modules/
+
+# Java IDE / VSCode 配置
+.vscode/
+*.iml
+*.class
+
+# Ollama 模型文件和缓存
+.ollama/                   # Ollama 本地模型管理目录
+*.gguf                     # 防止不小心提交 GGUF 模型
+*.bin
+*.safetensors
+models/                    # 若你把模型放到 models/ 目录，也一并忽略
+
+# hook 生成的临时文件
+/hooks/*.log
+
+# 系统文件
+.DS_Store
+Thumbs.db
