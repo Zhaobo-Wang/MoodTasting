@@ -6,7 +6,7 @@ def load_sql(path):
 
 def main():
     alcohol_sql  = load_sql('alcohol.sql')
-    material_sql = load_sql('material.sql')
+    material_sql = load_sql('ingredient.sql')
 
     conn = sqlite3.connect('alcohol.db')
     conn.executescript(alcohol_sql)
