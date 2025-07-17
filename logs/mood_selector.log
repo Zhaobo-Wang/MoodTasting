@@ -1,8 +1,0 @@
-2025-07-17 13:27:39,259 - mood_selector - INFO - Starting mood_selector.py
-2025-07-17 13:27:39,259 - mood_selector - INFO - User input: I feel anxious
-2025-07-17 13:27:40,453 - mood_selector - INFO - Command output: anxious
-
-
-2025-07-17 13:27:40,454 - mood_selector - INFO - Command returncode: 0
-2025-07-17 13:27:40,454 - mood_selector - INFO - Mood: anxious
-2025-07-17 13:27:40,454 - mood_selector - INFO - Final mood: anxious
