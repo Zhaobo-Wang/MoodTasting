@@ -24,10 +24,17 @@ classification_prompt = (
 
 import subprocess, shlex
 
-cmd = f"ollama run gemma3:1b {shlex.quote(classification_prompt)} --no-stream"
-response = subprocess.run(shlex.split(cmd), capture_output=True, text=True, cwd=os.path.dirname(__file__))
+cmd = f"ollama run gemma3:1b {shlex.quote(classification_prompt)}"
+response = subprocess.run(
+        shlex.split(cmd), 
+        capture_output=True, 
+        text=True, 
+        encoding='utf-8',
+        errors='replace',
+        cwd=os.path.dirname(__file__)
+    )
 
-if response.returncode != 0:
+if response.returncode != 0 or response.stdout is None:
     sys.stderr.write(f"Error classifying mood: {response.stderr}")
     mood = "neutral"
 else:
@@ -55,7 +62,7 @@ except Exception as e:
 if recommendation:
     recommendation_text = "\n".join(recommendation)
 else:
-    "Sorry, I don't have any recommendations for you :("
+    recommendation_text = "Sorry, I don't have any recommendations for you :("
 
 output = (
     f"Mood Analysis:\n"
