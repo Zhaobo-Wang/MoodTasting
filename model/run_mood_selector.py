@@ -25,7 +25,7 @@ def main():
 
     prompt = process_1.stdout
 
-    cmd = ["ollama", "run", "mood-taste"]
+    cmd = ["ollama", "run", "mood-taste:latest"]
     process_2 = subprocess.Popen(
         cmd,
         stdin=subprocess.PIPE,

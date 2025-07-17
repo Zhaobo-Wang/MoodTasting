@@ -18,8 +18,8 @@ labels = ["happy","tired","nostalgic","stresponsesed","excited","relaxed",
           "romantic","angry","sad","bored","anxious","celebratory"]
 
 classification_prompt = (
-    "你是情绪分析师，请判断下面句子的主要心情，只能从以下标签中选择："
-    f"{', '.join(labels)}\n\nUser Input:\"{user_input}\""
+    "分析以下文本的情绪, 只回复一个词: happy, tired, nostalgic, stressed, excited, relaxed, romantic, angry, sad, bored, anxious, celebratory。\n\n"
+    f"文本：\"{user_input}\""
 )
 
 import subprocess, shlex
