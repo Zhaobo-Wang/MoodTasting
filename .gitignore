@@ -22,3 +22,7 @@ models/                    # 若你把模型放到 models/ 目录，也一并忽
 # 系统文件
 .DS_Store
 Thumbs.db
+
+./logs
+
+
