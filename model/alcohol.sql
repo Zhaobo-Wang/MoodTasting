@@ -23,4 +23,6 @@ INSERT OR REPLACE INTO alcohol (mood, name, description, pairing) VALUES
 ('anxious',    'Chamomile Tea Cocktail', '洋甘菊茶基底，蜂蜜调和，温柔安抚',   '静心阅读'),
 ('celebratory','Champagne Royale','香槟加少许利口酒，点睛华彩',         '盛大庆典');
 
+INSERT INTO alcohol (mood, name, description, pairing) 
+VALUES ('happy', '阳光鸡尾酒', '明亮清爽的柑橘口感，带有轻微的甜味', '适合搭配小食和开胃菜');
 COMMIT;
